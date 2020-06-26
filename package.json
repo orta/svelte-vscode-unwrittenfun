@@ -1,7 +1,8 @@
 {
     "name": "svelte-vscode",
-    "version": "0.9.3",
-    "description": "Svelte language support for VS Code",
+    "version": "0.9.4",
+    "displayName": "[Deprecated] Svelte",
+    "description": "Use 'Svelte VS Code' by the Svelte team",
     "main": "dist/extension.js",
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
@@ -24,7 +25,6 @@
         "url": "https://github.com/UnwrittenFun/svelte-vscode/issues"
     },
     "homepage": "https://github.com/UnwrittenFun/svelte-vscode#readme",
-    "displayName": "Svelte",
     "publisher": "JamesBirtles",
     "icon": "icons/logo.png",
     "galleryBanner": {
