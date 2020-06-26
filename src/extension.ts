@@ -1,6 +1,6 @@
 import * as path from 'path';
 
-import { workspace, ExtensionContext, TextDocument, Position, commands, window } from 'vscode';
+import { workspace, ExtensionContext, TextDocument, Position, commands, window, Uri } from 'vscode';
 import {
     LanguageClient,
     LanguageClientOptions,
@@ -19,6 +19,11 @@ namespace TagCloseRequest {
 }
 
 export function activate(context: ExtensionContext) {
+    window.showInformationMessage("This extension has been replaced by the official Svelte VS Code extension", "Open Extension in Marketplace").then(r => {
+        if (r) {
+            commands.executeCommand('vscode.open', Uri.parse('https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode'));
+        }
+    })
     let serverModule = context.asAbsolutePath(
         path.join('./', 'node_modules', 'svelte-language-server', 'bin', 'server.js'),
     );
